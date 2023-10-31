@@ -72,7 +72,39 @@ Untuk memanfaatkan High Level Architecture (HLA), berikut langkah-langkah yang d
 
 
 
-## Use Case Diagram (naufal)
+## Use Case Diagram
+
+Diagram use case adalah representasi grafis dari interaksi yang mungkin dilakukan pengguna dengan sistem. Diagram ini menunjukkan berbagai use case dan berbagai jenis pengguna yang dimiliki sistem dan seringkali disertai dengan jenis diagram lainnya. Use case digambarkan dengan lingkaran atau elips.
+
+Diagram use case biasanya sederhana. Diagram ini tidak menunjukkan detail dari use case: hanya merangkum beberapa hubungan antara use case, aktor, dan sistem. Diagram ini tidak menunjukkan urutan langkah-langkah yang dilakukan untuk mencapai tujuan setiap use case.
+
+Diagram use case membantu kita merancang sistem dari perspektif pengguna akhir. Ini adalah teknik yang efektif untuk berkomunikasi perilaku sistem dalam istilah pengguna dengan menentukan semua perilaku sistem yang terlihat dari luar.
+
+Perlu diingat, diagram use case hanya mewakili persyaratan fungsional dari sistem. Persyaratan lain seperti aturan bisnis, persyaratan kualitas layanan, dan batasan implementasi harus diwakili secara terpisah, lagi-lagi, dengan diagram UML lainnya.
+
+Untuk membuat use-case Diagran dalam file markdown, kita bisa menggunakan ekstensi PlantUML pada IDE/_Text Editor_ yang digunakan. Kemudian kita bisa membuatnya menggunakan bahasa PlantUML, dan menghasilkan diagram seperti :
+
+```plantuml
+@startuml
+left to right direction
+actor Pustakawan as librarian
+actor Anggota as member
+
+rectangle "Sistem Perpustakaan" {
+  usecase (UC1) as "Pinjam Buku" 
+  usecase (UC2) as "Kembalikan Buku"
+  usecase (UC3) as "Perpanjang Peminjaman"
+  usecase (UC4) as "Cek Status Buku"
+  
+  librarian --> UC1
+  librarian --> UC2
+  member --> UC3
+  member --> UC4
+}
+@enduml
+```
+
+![contoh use case diagram](https://www.planttext.com/api/plantuml/svg/RP2xZW8n34NxVCNLL51GyAXNF4gQaH0VO0PlDaoIGOaZ2iI_huS1f5cjbEhw-DZEEWibAS4Rpzy2wP2S_H6SNU96N1SDDT8br4N1bcuKGHdUdH8bH-_g9bhR2VMbmE74oPY-dQBrZEhWid10pUawM2XMk1kWP6ueCoR7tNpQDrUrYnSAs9QsL1WJYu7Ogv-yQtMH9pM6bY-DZY8rHQjJmzEfCyVeQa1ttE8W92L_VFe-1s8s-uAkzq-sq6ouzXKi_mOhyp1hZcVztby0)
 
 ## Diagram (Mermaid.js)
 Mermaid adalah alat diagram dan grafik berbasis JavaScript yang menggunakan definisi teks terinspirasi Markdown dan renderer untuk menciptakan dan memodifikasi diagram kompleks. Tujuan utama dari Mermaid adalah untuk membantu dokumentasi mengejar ketinggalan dengan pengembangan.
