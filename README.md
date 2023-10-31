@@ -25,11 +25,174 @@ Semantic Versioning merupakan bilangan 3 komponen dalam format X.Y.Z, dimana :
 - Sebelum 1.0.0 hanyalah Fase Pengembangan, di mana Anda fokus menyelesaikan sesuatu. Tahap ini diperuntukkan bagi pengembang dimana sistem sedang dikembangkan.
 - SemVer tidak mencakup perpustakaan yang diberi tag 0. * . *. Versi stabil pertama adalah 1.0.0.2
 
-## High Level Arsitektur (ilham)
+## High Level Arsitektur
+HLA merupakan standar kerangka kerja yang memungkinkan berbagai simulasi berbasis komputer beroperasi dan berinteraksi dalam sebuah lingkungan terdistribusi. Tujuannya adalah memudahkan integrasi dan komunikasi di antara sistem simulasi yang beragam. Standar ini sangat relevan dan digunakan di sektor-sektor seperti militer, kedirgantaraan, hiburan, dan penelitian. Dengan HLA, sistem-sistem simulasi dapat berbagi data dan informasi dengan cara yang konsisten dan akurat, menjamin hasil simulasi yang handal.
+
+![HLA](https://learn.microsoft.com/en-us/windows-365/enterprise/media/high-level-architecture/architecture-diagram.png)
+
+### Kenapa High Level Arsitektur dicantumkan?
+Menyertakan High Level Architecture (HLA) dalam file `Readme.md` di sebuah repository memberikan berbagai keuntungan, antara lain:
+
+1. **Pemahaman Mendalam**: HLA menawarkan gambaran singkat mengenai cara kerja sistem, memudahkan bagi siapapun yang ingin memahami proyek dengan cepat.
+
+2. **Dokumentasi Visual**: Sebagai bentuk dokumentasi yang intuitif, HLA dapat menggambarkan ide-ide kompleks dengan cara yang lebih mudah dicerna dibandingkan dengan penjelasan berbasis teks saja.
+
+3. **Meningkatkan Kolaborasi**: Dengan memahami kerangka kerja tingkat tinggi, kontributor baru dapat lebih cepat mengetahui bagaimana mereka dapat berkontribusi. Hal ini mendukung kerjasama tim dan integrasi kontribusi dengan lebih efisien.
+
+4. **Sebagai Panduan**: HLA bertindak sebagai referensi saat menambahkan atau mengubah fitur, memastikan bahwa perubahan tetap konsisten dengan visi arsitektural awal.
+
+![contoh HLA](https://2318454062-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FNYWPEEAknX9Vki1yV5HY%2Fuploads%2Fgit-blob-a1b3f93729f275d8253132d746e33ff7a823ced1%2FGuardian%20Architecture.png?alt=media)
+
+
+### Cara memanfaatkan :
+
+Untuk memanfaatkan High Level Architecture (HLA), berikut langkah-langkah yang direkomendasikan:
+
+1. **Definisikan Tujuan**: Mulailah dengan memahami tujuan dari sistem yang hendak Anda kembangkan. Mengenali tujuan akan memandu Anda dalam menentukan fitur-fitur esensial yang diperlukan.
+
+2. **Kenali Komponen Utama**: Tentukan komponen-komponen krusial dari sistem, entah itu berupa modul, subsistem, atau bagian lain yang memiliki fungsinya masing-masing.
+
+3. **Susun Desain**: Buatlah desain arsitektural tingkat tinggi untuk sistem. Ini meliputi deskripsi keseluruhan arsitektur, desain basis data, ringkasan sistem, layanan yang ditawarkan, platform yang digunakan, serta relasi antar modul.
+
+4. **Evaluasi Desain**: Setelah mendesain, pastikan untuk mengevaluasi agar seluruh komponen tersentuh dan relasi antar-komponen telah tepat.
+
+5. **Lakukan Implementasi**: Terapkan desain tingkat tinggi ke dalam kode program. Selama tahap ini, Anda mungkin memerlukan beberapa modifikasi pada desain untuk mengoptimalkan kinerja sistem.
+
+
+**Referensi**:
+- [Perbedaan High Level Design dan Low Level Design - Glints](https://glints.com/id/lowongan/high-level-low-level-design/)
+- [Software Architecture by Rizal](https://medium.com/sulang/software-architecture-60861fdf6f49)
+- [Hierarchy Control System - Dinamika](https://repository.dinamika.ac.id/id/eprint/1424/5/BAB_III.pdf)
+- [Arsitektur High Tech - 99.co](https://www.99.co/id/panduan/arsitektur-High-Tech/)
+- [Database System - BINUS UNIVERSITY](https://student-activity.binus.ac.id/bslc/wp-content/uploads/sites/49/2017/11/Teknik-Informatika-Database-System.pdf)
+
+
 
 ## Use Case Diagram (naufal)
 
-## Diagram (ER Diagram, User Journey, Sequence Diagram, dll) (disarankan menggunakan mermaid) (ilham)
+## Diagram (Mermaid.js)
+Mermaid adalah alat diagram dan grafik berbasis JavaScript yang menggunakan definisi teks terinspirasi Markdown dan renderer untuk menciptakan dan memodifikasi diagram kompleks. Tujuan utama dari Mermaid adalah untuk membantu dokumentasi mengejar ketinggalan dengan pengembangan.
+
+Pembuatan diagram dan dokumentasi memakan waktu developer yang berharga dan cepat menjadi usang. Namun, tidak memiliki diagram atau dokumen merusak produktivitas dan menghambat pembelajaran organisasional.
+Mermaid mengatasi masalah ini dengan memungkinkan pengguna untuk menciptakan diagram yang mudah dimodifikasi. Ini juga dapat diintegrasikan ke dalam skrip produksi (dan potongan kode lainnya).
+
+Mermaid memungkinkan bahkan bagi non-programmer untuk dengan mudah menciptakan diagram rinci melalui [Mermaid Live Editor](https://mermaid.live/).
+
+
+### Sequence Diagram
+Sequence diagram adalah salah satu jenis diagram dalam Unified Modeling Language (UML) yang digunakan untuk menjelaskan dan menampilkan interaksi antar objek-objek dalam sebuah sistem secara terperinci. Diagram ini juga menampilkan pesan atau perintah yang dikirim, beserta waktu pelaksanaannya.
+
+```mermaid
+sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you ?
+    Bob->>Alice: Fine, thank you. And you?
+    create participant Carl
+    Alice->>Carl: Hi Carl!
+    create actor D as Donald
+    Carl->>D: Hi!
+    destroy Carl
+    Alice-xCarl: We are too many
+    destroy Bob
+    Bob->>Alice: I agree
+```
+![sequence contoh](https://svgshare.com/i/z82.svg)
+
+
+### Class Diagram
+Class diagram adalah representasi visual dari model objek dalam sistem yang memperlihatkan hubungan antara class, objek, atribut, dan operasi. Class diagram membantu untuk menjelaskan struktur sistem dan menunjukkan bagaimana class dan objek saling berinteraksi dan berkomunikasi satu sama lain.
+
+```mermaid
+---
+title: Animal example
+---
+classDiagram
+    note "From Duck till Zebra"
+    Animal <|-- Duck
+    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+        +String beakColor
+        +swim()
+        +quack()
+    }
+    class Fish{
+        -int sizeInFeet
+        -canEat()
+    }
+    class Zebra{
+        +bool is_wild
+        +run()
+    }
+```
+
+
+![class diagram contoh](https://i.ibb.co/8YqyFLB/Screenshot-2023-10-31-170215.png)
+
+### State Diagram
+State diagram, atau juga dikenal sebagai statechart, adalah diagram yang digunakan untuk mendeskripsikan perilaku sistem. Diagram ini menggambarkan semua kondisi yang mungkin muncul sebagai sebuah objek, begitu pula dengan event.
+
+```mermaid
+stateDiagram
+    [*] --> Still
+    Still --> [*]
+
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+
+![state contoh](https://cdn.discordapp.com/attachments/1061643972650479678/1168854057503436830/image.png?ex=6553472b&is=6540d22b&hm=270818e9d8fd2ccb0a5cf5ddf6bbe00f8f3057d8e7a5d2c4a1d57c903d006d88&)
+
+### Entity Relationship Diagram
+Entity Relationship Diagram (ERD) adalah sebuah diagram yang digunakan untuk menggambarkan hubungan antara entitas (objek) dalam sebuah database. ERD menjelaskan hubungan antar objek-objek data yang mempunyai hubungan antar relasi. ERD digunakan untuk menyusun struktur data dan hubungan antar data, dan untuk menggambarkannya digunakan notasi, simbol, bagan, dan lain sebagainya.
+
+```mermaid
+erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string registrationNumber PK
+        string make
+        string model
+        string[] parts
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string driversLicense PK "The license #"
+        string(99) firstName "Only 99 characters are allowed"
+        string lastName
+        string phone UK
+        int age
+    }
+    NAMED-DRIVER {
+        string carRegistrationNumber PK, FK
+        string driverLicence PK, FK
+    }
+    MANUFACTURER only one to zero or more CAR : makes
+```
+
+![erd contoh](https://cdn.discordapp.com/attachments/1061643972650479678/1168855267023265853/Screenshot_2023-10-31_17105a6.png?ex=6553484b&is=6540d34b&hm=d984763e7c094f8870adca6dc9c12d1acc946659be886f092442b3a24a30b9f7&)
+
+### User Journey
+User journey adalah kumpulan langkah-langkah yang menggambarkan berbagai skenario kemungkinan tentang bagaimana pengguna berinteraksi dengan produk yang di desain. User journey dapat menggambarkan dua hal: bagaimana pengguna saat ini berinteraksi dengan produk, dan bagaimana pengguna bisa berinteraksi dengan produk.
+
+```mermaid
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 5: Me
+```
+![contoh journey](https://cdn.discordapp.com/attachments/1061643972650479678/1168856034715119687/Screenshot_2023-10-31_17105a6a.png?ex=65534902&is=6540d402&hm=e653b6a9b5c6675ddbecb7dea92d82ae62d7dd80c53cde289d10dc1cd9493f0b&)
 
 ## Makefile (install, audit, run, test, test with coverage)
 
@@ -67,6 +230,37 @@ Makefile adalah cara mengotomatiskan prosedur *software building* dan tugas komp
 ### Java
 
 ### Node.js
+
+- install
+  ```Makefile
+  install:
+    npm install
+  ```
+
+- audit
+  ```Makefile
+  audit:
+    npm audit
+  ```
+
+- run (disesuaikan letak file entry point)
+  ```Makefile
+  run:
+	npm start
+  ```
+
+- test
+  ```Makefile
+  test:
+    npm test
+  ```
+
+- test (with coverage)
+  ```Makefile
+  test-coverage:
+	npm test -- --coverage
+  ```
+
 
 ## Badge
 
