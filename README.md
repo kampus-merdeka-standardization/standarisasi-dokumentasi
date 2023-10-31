@@ -267,7 +267,65 @@ Makefile adalah cara mengotomatiskan prosedur *software building* dan tugas komp
 	go tool cover -func=coverage.cov
   ```
 
-### Java
+### Maven
+
+- install
+  ```Makefile
+  install:
+    ./mvnw install
+  ```
+- audit
+  ```Makefile
+  audit:
+    ./mvnw dependency:tree
+  ```
+- run
+  ```Makefile
+  run:
+	./mvnw spring-boot:run
+  ```
+- test 
+  ```Makefile
+  test:
+    ./mvnw test
+  ```
+- test (with coverage)
+  ```Makefile
+  test-coverage:
+	./mvnw test jacoco:report
+  ```
+
+Perlu diingat, _test with coverage_, perlu menambahkan plugin `jacoco` kedalam maven. Akan tetapi, untuk lebih mudah, IDE seperti `Intellij Idea` telah menyediakan fitur _test with coverage_ sendiri.
+
+### Gradle
+
+- install
+  ```Makefile
+  install:
+    ./gradlew build
+  ```
+- audit
+  ```Makefile
+  audit:
+    ./gradlew dependencies
+  ```
+- run
+  ```Makefile
+  run:
+	./gradlew bootRun
+  ```
+- test 
+  ```Makefile
+  test:
+    ./gradlew test
+  ```
+- test (with coverage)
+  ```Makefile
+  test-coverage:
+	./gradlew test jacocoTestReport
+  ```
+
+Perlu diingat, _test with coverage_, perlu menambahkan plugin `jacoco` kedalam maven. Akan tetapi, untuk lebih mudah, IDE seperti `Intellij Idea` telah menyediakan fitur _test with coverage_ sendiri.
 
 ### Node.js
 
