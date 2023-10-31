@@ -194,6 +194,10 @@ journey
 ```
 ![contoh journey](https://cdn.discordapp.com/attachments/1061643972650479678/1168856034715119687/Screenshot_2023-10-31_17105a6a.png?ex=65534902&is=6540d402&hm=e653b6a9b5c6675ddbecb7dea92d82ae62d7dd80c53cde289d10dc1cd9493f0b&)
 
+Untuk Contoh dokumentasi lengkapnya bisa dilihat disini:
+- [Mermaid.js Documentation](https://mermaid.js.org/intro/)
+
+
 ## Makefile (install, audit, run, test, test with coverage)
 
 Makefile adalah cara mengotomatiskan prosedur *software building* dan tugas kompleks lainnya yang memiliki ketergantungan. Makefile berisi *dependency rules*, *macros* dan *suffix* (atau *implicit*) *rules*.
