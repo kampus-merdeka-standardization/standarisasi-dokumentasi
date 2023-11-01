@@ -106,6 +106,14 @@ rectangle "Sistem Perpustakaan" {
 
 ![contoh use case diagram](https://www.planttext.com/api/plantuml/svg/RP2xZW8n34NxVCNLL51GyAXNF4gQaH0VO0PlDaoIGOaZ2iI_huS1f5cjbEhw-DZEEWibAS4Rpzy2wP2S_H6SNU96N1SDDT8br4N1bcuKGHdUdH8bH-_g9bhR2VMbmE74oPY-dQBrZEhWid10pUawM2XMk1kWP6ueCoR7tNpQDrUrYnSAs9QsL1WJYu7Ogv-yQtMH9pM6bY-DZY8rHQjJmzEfCyVeQa1ttE8W92L_VFe-1s8s-uAkzq-sq6ouzXKi_mOhyp1hZcVztby0)
 
+Atau, kita juga membuatnya menggunakan [draw.io](https://app.diagrams.net/), kemudian export, dan sertakan lokasi fotonya ke dalam markdown file seperti :
+
+```
+![alt text](/lokasi/foto)
+```
+
+![foto usecase diagram](https://www.dicoding.com/blog/wp-content/uploads/2020/04/internship-rendi-ovo-use-case.png)
+
 ## Diagram (Mermaid.js)
 Mermaid adalah alat diagram dan grafik berbasis JavaScript yang menggunakan definisi teks terinspirasi Markdown dan renderer untuk menciptakan dan memodifikasi diagram kompleks. Tujuan utama dari Mermaid adalah untuk membantu dokumentasi mengejar ketinggalan dengan pengembangan.
 
