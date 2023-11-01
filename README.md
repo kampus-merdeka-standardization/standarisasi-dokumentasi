@@ -27,7 +27,7 @@ Semantic Versioning merupakan bilangan 3 komponen dalam format X.Y.Z, dimana :
 
 - Versi pertama dimulai pada 0.1.0 dan bukan pada 0.0.1, karena tidak ada perbaikan bug yang dilakukan, kami memulai dengan serangkaian fitur sebagai draf pertama proyek.
 - Sebelum 1.0.0 hanyalah Fase Pengembangan, di mana Anda fokus menyelesaikan sesuatu. Tahap ini diperuntukkan bagi pengembang dimana sistem sedang dikembangkan.
-- SemVer tidak mencakup perpustakaan yang diberi tag 0. * . *. Versi stabil pertama adalah 1.0.0.2
+- Versi stabil pertama adalah 1.0.0
 
 ## High Level Arsitektur
 HLA merupakan standar kerangka kerja yang memungkinkan berbagai simulasi berbasis komputer beroperasi dan berinteraksi dalam sebuah lingkungan terdistribusi. Tujuannya adalah memudahkan integrasi dan komunikasi di antara sistem simulasi yang beragam. Standar ini sangat relevan dan digunakan di sektor-sektor seperti militer, kedirgantaraan, hiburan, dan penelitian. Dengan HLA, sistem-sistem simulasi dapat berbagi data dan informasi dengan cara yang konsisten dan akurat, menjamin hasil simulasi yang handal.
